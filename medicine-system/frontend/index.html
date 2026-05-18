@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ZEPHYRA</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body class="center-content">
+  <div class="header">
+    <img src="logo.png" alt="Logo" class="logo">
+  </div>
+
+  <hr>
+
+  <h2>Add Medicine</h2>
+  <form id="medicineForm" onsubmit="event.preventDefault(); addMedicine();">
+
+    <label>Medicine Name:</label><br>
+    <input type="text" id="name"><br><br>
+
+    <label>Company:</label><br>
+    <input type="text" id="company"><br><br>
+
+    <label>Category:</label><br>
+    <select id="category">
+      <option value="">--Select--</option>
+      <option>Tablet</option>
+      <option>Syrup</option>
+      <option>Injection</option>
+      <option>Capsule</option>
+    </select><br><br>
+
+    <label>Price (₹):</label><br>
+    <input type="number" id="price"><br><br>
+
+    <label>Stock:</label><br>
+    <input type="number" id="stock"><br><br>
+
+    <label>Expiry Date:</label><br>
+    <input type="date" id="expiryDate"><br><br>
+
+    <label>Description:</label><br>
+    <textarea id="description" rows="3" cols="30"></textarea><br><br>
+
+    <input type="submit" value="Add Medicine">
+  </form>
+
+  <hr>
+
+  <h2>Search Medicine</h2>
+  <input type="text" id="searchInput" onkeyup="searchMedicine()" placeholder="Type name of medicine"><br><br>
+
+  <hr>
+
+  <h2>Medicine List</h2>
+  <div id="medicineList" class="hidden">No medicines found.</div>
+
+</body>
+</html>
